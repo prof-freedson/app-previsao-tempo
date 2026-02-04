@@ -1,50 +1,62 @@
-# Welcome to your Expo app 👋
+# App Previsão do Tempo 🌦️
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Um aplicativo moderno e elegante de previsão do tempo desenvolvido com **React Native** e **Expo**. Este projeto permite que os usuários verifiquem o clima atual de qualquer cidade do mundo, utilizando a API do OpenWeatherMap.
 
-## Get started
+## 📱 Funcionalidades
 
-1. Install dependencies
+- **Consulta de Clima:** Busque pela cidade e veja a temperatura, umidade, velocidade do vento e condições climáticas.
+- **Interface Moderna:** Design rico com Glassmorphism (efeito vidro) e gradientes lineares.
+- **Navegação Fluida:** Estrutura de navegação gerenciada pelo **Expo Router**.
+- **Telas:**
+  - **Home:** Menu principal intuitivo.
+  - **Previsão:** Tela detalhada com os dados meteorológicos.
+  - **Privacidade:** Tela de política de privacidade informativa.
 
+## 🛠️ Tecnologias Utilizadas
+
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/)
+- [Expo Router](https://docs.expo.dev/router/introduction/)
+- [Axios](https://axios-http.com/) (Consumo de API)
+- [OpenWeatherMap API](https://openweathermap.org/) (Dados Meteorológicos)
+- [Linear Gradient](https://docs.expo.dev/versions/latest/sdk/linear-gradient/)
+
+## 🚀 Como Executar o Projeto
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/prof-freedson/app-previsao-tempo.git
+   cd app-previsao-tempo
+   ```
+
+2. **Instale as dependências:**
    ```bash
    npm install
    ```
 
-2. Start the app
+3. **Configuração da API Key:**
+   - Crie um arquivo `.env` na raiz do projeto.
+   - Adicione sua chave do OpenWeatherMap:
+     ```env
+     EXPO_PUBLIC_WEATHER_API_KEY=sua_chave_api_aqui
+     ```
 
+4. **Execute o projeto:**
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+## 📂 Estrutura do Projeto
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+app-previsao-tempo/
+├── app/
+│   ├── _layout.tsx      # Layout e rotas
+│   ├── index.tsx        # Tela Principal
+│   ├── weather.tsx      # Tela de Clima
+│   └── privacy.tsx      # Tela de Privacidade
+├── assets/              # Imagens e ícones
+└── ...
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
