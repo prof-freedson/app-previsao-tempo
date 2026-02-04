@@ -10,8 +10,8 @@ export default function PrivacyScreen() {
     // URLs das imagens (adaptar conforme a estrutura do projeto)
     // Assumindo que assets podem ser importados assim ou movidos para pasta assets
     // Vou usar os caminhos relativos prováveis
-    const iconImage = require('../app-previsao-tempo-web/icon.png');
-    const bannerImage = require('../banner.png');
+    const iconImage = require('../assets/images/icon.png');
+    const bannerImage = require('../assets/images/banner.png');
 
     return (
         <LinearGradient
