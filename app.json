@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "app-previsao-tempo",
+    "name": "App Previsão Tempo",
     "slug": "app-previsao-tempo",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -19,7 +19,8 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.proffreedson.appprevisaotempo"
     },
     "web": {
       "output": "static",
@@ -43,6 +44,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "f670d982-2ce4-42b8-9a39-be51d93c737d"
+      }
     }
   }
 }

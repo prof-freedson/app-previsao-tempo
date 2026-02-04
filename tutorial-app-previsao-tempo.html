@@ -1,0 +1,424 @@
+<!DOCTYPE html><html><head>
+      <title>tutorial-app-previsao-tempo</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\professor\.antigravity\extensions\shd101wyy.markdown-preview-enhanced-0.8.20-universal\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="tutorial-app-de-previsão-do-tempo-com-react-native-e-expo">Tutorial: App de Previsão do Tempo com React Native e Expo </h1>
+<h2 id="1-objetivo-e-resumo">1. Objetivo e Resumo </h2>
+<p>Este tutorial tem como objetivo criar um aplicativo completo de previsão do tempo para Android. O usuário poderá digitar o nome de uma cidade e visualizar a temperatura atual, condições climáticas e outros detalhes. Focaremos em uma interface moderna e agradável (UI rica) e cobriremos desde a criação do projeto até a geração do arquivo APK e publicação na loja alternativa APKPure.</p>
+<p><strong>Passos a serem executados:</strong></p>
+<ol>
+<li>Configuração do ambiente e criação do projeto Expo.</li>
+<li>Instalação de dependências (Axios para API, Ícones, Gradientes).</li>
+<li>Obtenção da API Key no OpenWeatherMap.</li>
+<li>Desenvolvimento da interface e lógica com React Native.</li>
+<li>Personalização do ícone e nome do app.</li>
+<li>Geração do build (APK) usando EAS (Expo Application Services).</li>
+<li>Publicação do aplicativo na APKPure.</li>
+</ol>
+<hr>
+<h2 id="2-estrutura-de-pastas-e-arquivos">2. Estrutura de Pastas e Arquivos </h2>
+<p>A estrutura sugerida segue o padrão do <strong>Expo Router</strong>:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>app-previsao-tempo/
+├── app/
+│   ├── _layout.tsx      # Configuração global de rotas e estilos
+│   └── index.tsx        # Tela principal (Lógica e UI do App)
+├── assets/
+│   ├── adaptive-icon.png
+│   ├── favicon.png
+│   ├── icon.png         # Ícone do App (512x512)
+│   └── splash.png
+├── app.json             # Configurações do Expo (nome, slug, versão, ícone)
+├── eas.json             # Configurações de Build do EAS
+├── package.json         # Dependências
+└── tsconfig.json
+</code></pre><hr>
+<h2 id="3-criação-do-app-e-instalação-de-pacotes">3. Criação do App e Instalação de Pacotes </h2>
+<p>Abra seu terminal na pasta onde deseja criar o projeto e execute:</p>
+<h3 id="31-criar-o-projeto">3.1. Criar o Projeto </h3>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Cria o projeto usando o template padrão</span>
+npx create-expo-app@latest app-previsao-tempo
+
+<span class="token comment"># Navegue para a pasta do projeto</span>
+<span class="token builtin class-name">cd</span> app-previsao-tempo
+</code></pre><h3 id="32-instalar-bibliotecas-necessárias">3.2. Instalar Bibliotecas Necessárias </h3>
+<p>Instalaremos o <code>axios</code> para requisições HTTP e o <code>expo-linear-gradient</code> para criar fundos esteticamente agradáveis. O pacote de ícones <code>@expo/vector-icons</code> já vem instalado por padrão no Expo, mas garantiremos sua presença.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Instala o Axios, Linear Gradient e dependências do Expo Router</span>
+npx expo <span class="token function">install</span> axios expo-linear-gradient expo-router react-native-safe-area-context react-native-screens expo-linking expo-constants expo-status-bar
+</code></pre><hr>
+<h2 id="4-obtendo-a-chave-da-api-openweathermap">4. Obtendo a Chave da API (OpenWeatherMap) </h2>
+<p>Para consultar o clima, usaremos a API gratuita do OpenWeatherMap.</p>
+<ol>
+<li>Acesse <a href="https://openweathermap.org/">openweathermap.org</a> e clique em <strong>"Sign in"</strong> ou <strong>"Create Account"</strong>.</li>
+<li>Após criar a conta e verificar seu e-mail, faça login.</li>
+<li>No painel, clique na aba <strong>"API keys"</strong>.</li>
+<li>Você verá uma "Default" key ou poderá gerar uma nova.</li>
+<li><strong>Copie essa chave</strong>. Você a usará no código.</li>
+</ol>
+<blockquote>
+<p><strong>Nota:</strong> A chave pode levar de 1 a 2 horas para ser ativada após a criação. Se receber erro 401 inicialmente, aguarde um pouco.</p>
+</blockquote>
+<hr>
+<h2 id="5-desenvolvimento-do-código">5. Desenvolvimento do Código </h2>
+<p>Abaixo estão os códigos principais com comentários explicativos. Focaremos em uma UI moderna (Glassmorphism, gradientes).</p>
+<h3 id="51-app_layouttsx">5.1. <code>app/_layout.tsx</code> </h3>
+<p>Configuração básica para manter a barra de status transparente e estilizada.</p>
+<pre data-role="codeBlock" data-info="tsx" class="language-tsx tsx"><code><span class="token keyword keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">Stack</span> <span class="token punctuation">}</span></span> <span class="token keyword keyword-from">from</span> <span class="token string">'expo-router'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">StatusBar</span> <span class="token punctuation">}</span></span> <span class="token keyword keyword-from">from</span> <span class="token string">'expo-status-bar'</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-export">export</span> <span class="token keyword keyword-default">default</span> <span class="token keyword keyword-function">function</span> <span class="token function">RootLayout</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-return">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">StatusBar</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css">light</span><span class="token punctuation">"</span></span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Stack</span></span> <span class="token attr-name">screenOptions</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> headerShown<span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="52-appindextsx">5.2. <code>app/index.tsx</code> </h3>
+<p>Este é o coração do app. Contém a lógica de busca e a interface visual.</p>
+<pre data-role="codeBlock" data-info="tsx" class="language-tsx tsx"><code><span class="token keyword keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">Ionicons</span> <span class="token punctuation">}</span></span> <span class="token keyword keyword-from">from</span> <span class="token string">'@expo/vector-icons'</span><span class="token punctuation">;</span> <span class="token comment">// Ícones</span>
+<span class="token keyword keyword-import">import</span> <span class="token imports">axios</span> <span class="token keyword keyword-from">from</span> <span class="token string">'axios'</span><span class="token punctuation">;</span> <span class="token comment">// Para requisições HTTP</span>
+<span class="token keyword keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">LinearGradient</span> <span class="token punctuation">}</span></span> <span class="token keyword keyword-from">from</span> <span class="token string">'expo-linear-gradient'</span><span class="token punctuation">;</span> <span class="token comment">// Para o fundo degradê</span>
+<span class="token keyword keyword-import">import</span> <span class="token imports"><span class="token maybe-class-name">React</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span></span> <span class="token keyword keyword-from">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token imports"><span class="token punctuation">{</span>
+    <span class="token maybe-class-name">ActivityIndicator</span><span class="token punctuation">,</span>
+    <span class="token maybe-class-name">Alert</span><span class="token punctuation">,</span>
+    <span class="token maybe-class-name">Keyboard</span><span class="token punctuation">,</span>
+    <span class="token maybe-class-name">StyleSheet</span><span class="token punctuation">,</span>
+    <span class="token maybe-class-name">Text</span><span class="token punctuation">,</span>
+    <span class="token maybe-class-name">TextInput</span><span class="token punctuation">,</span>
+    <span class="token maybe-class-name">TouchableOpacity</span><span class="token punctuation">,</span>
+    <span class="token maybe-class-name">View</span>
+<span class="token punctuation">}</span></span> <span class="token keyword keyword-from">from</span> <span class="token string">'react-native'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Substitua pela sua chave API do OpenWeatherMap</span>
+<span class="token keyword keyword-const">const</span> <span class="token constant">API_KEY</span> <span class="token operator">=</span> <span class="token string">'SUA_CHAVE_API_AQUI'</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-export">export</span> <span class="token keyword keyword-default">default</span> <span class="token keyword keyword-function">function</span> <span class="token function">Index</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-const">const</span> <span class="token punctuation">[</span>cidade<span class="token punctuation">,</span> setCidade<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-const">const</span> <span class="token punctuation">[</span>clima<span class="token punctuation">,</span> setClima<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token generic-function"><span class="token function">useState</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token builtin">any</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token keyword keyword-null">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-const">const</span> <span class="token punctuation">[</span>loading<span class="token punctuation">,</span> setLoading<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Função para buscar dados do clima</span>
+    <span class="token keyword keyword-const">const</span> <span class="token function-variable function">buscarClima</span> <span class="token operator">=</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>cidade<span class="token punctuation">.</span><span class="token method function property-access">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token maybe-class-name">Alert</span><span class="token punctuation">.</span><span class="token method function property-access">alert</span><span class="token punctuation">(</span><span class="token string">'Erro'</span><span class="token punctuation">,</span> <span class="token string">'Por favor, digite o nome de uma cidade.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-return">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token function">setLoading</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token maybe-class-name">Keyboard</span><span class="token punctuation">.</span><span class="token method function property-access">dismiss</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Esconde o teclado</span>
+
+        <span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+            <span class="token comment">// Endpoint de clima atual</span>
+            <span class="token keyword keyword-const">const</span> response <span class="token operator">=</span> <span class="token keyword keyword-await">await</span> axios<span class="token punctuation">.</span><span class="token method function property-access">get</span><span class="token punctuation">(</span>
+                <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">https://api.openweathermap.org/data/2.5/weather?q=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>cidade<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&amp;appid=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">API_KEY</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&amp;units=metric&amp;lang=pt_br</span><span class="token template-punctuation string">`</span></span>
+            <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">setClima</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span><span class="token property-access">data</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token maybe-class-name">Alert</span><span class="token punctuation">.</span><span class="token method function property-access">alert</span><span class="token punctuation">(</span><span class="token string">'Erro'</span><span class="token punctuation">,</span> <span class="token string">'Cidade não encontrada ou erro na conexão.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">setClima</span><span class="token punctuation">(</span><span class="token keyword keyword-null">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword keyword-finally">finally</span> <span class="token punctuation">{</span>
+            <span class="token function">setLoading</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-return">return</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">LinearGradient</span></span>
+            <span class="token comment">// Gradiente bonito de fundo (Azul escuro para roxo)</span>
+            <span class="token attr-name">colors</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">[</span><span class="token string">'#4c669f'</span><span class="token punctuation">,</span> <span class="token string">'#3b5998'</span><span class="token punctuation">,</span> <span class="token string">'#192f6a'</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span>
+            <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span><span class="token property-access">container</span><span class="token punctuation">}</span></span>
+        <span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">View</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span><span class="token property-access">content</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Text</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span><span class="token property-access">title</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Previsão do Tempo</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Text</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+
+                </span><span class="token punctuation">{</span><span class="token comment">/* Campo de Busca */</span><span class="token punctuation">}</span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">View</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span><span class="token property-access">searchContainer</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">TextInput</span></span>
+                        <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span><span class="token property-access">input</span><span class="token punctuation">}</span></span>
+                        <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Digite a cidade (ex: São Paulo)<span class="token punctuation">"</span></span>
+                        <span class="token attr-name">placeholderTextColor</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#ddd<span class="token punctuation">"</span></span>
+                        <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>cidade<span class="token punctuation">}</span></span>
+                        <span class="token attr-name">onChangeText</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>setCidade<span class="token punctuation">}</span></span>
+                    <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+                    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">TouchableOpacity</span></span> <span class="token attr-name">onPress</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>buscarClima<span class="token punctuation">}</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span><span class="token property-access">button</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Ionicons</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>search<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">24</span><span class="token punctuation">}</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#fff<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+                    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">TouchableOpacity</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">View</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+
+                </span><span class="token punctuation">{</span><span class="token comment">/* Loading Indicator */</span><span class="token punctuation">}</span><span class="token plain-text">
+                </span><span class="token punctuation">{</span>loading <span class="token operator">&amp;&amp;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">ActivityIndicator</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>large<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#fff<span class="token punctuation">"</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> marginTop<span class="token operator">:</span> <span class="token number">20</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">}</span><span class="token plain-text">
+
+                </span><span class="token punctuation">{</span><span class="token comment">/* Card de Informações do Clima */</span><span class="token punctuation">}</span><span class="token plain-text">
+                </span><span class="token punctuation">{</span>clima <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>loading <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">View</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span><span class="token property-access">weatherCard</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Text</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span><span class="token property-access">cityName</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>clima<span class="token punctuation">.</span><span class="token property-access">name</span><span class="token punctuation">}</span><span class="token plain-text">, </span><span class="token punctuation">{</span>clima<span class="token punctuation">.</span><span class="token property-access">sys</span><span class="token punctuation">.</span><span class="token property-access">country</span><span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Text</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+
+                        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">View</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span><span class="token property-access">tempContainer</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                            </span><span class="token punctuation">{</span><span class="token comment">/* Ícone dinâmico baseado no clima */</span><span class="token punctuation">}</span><span class="token plain-text">
+                            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Ionicons</span></span>
+                                <span class="token attr-name">name</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token function">getIconName</span><span class="token punctuation">(</span>clima<span class="token punctuation">.</span><span class="token property-access">weather</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token property-access">main</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span>
+                                <span class="token attr-name">size</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">80</span><span class="token punctuation">}</span></span>
+                                <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#fff<span class="token punctuation">"</span></span>
+                            <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+                            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Text</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span><span class="token property-access">temp</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span><span class="token known-class-name class-name">Math</span><span class="token punctuation">.</span><span class="token method function property-access">round</span><span class="token punctuation">(</span>clima<span class="token punctuation">.</span><span class="token property-access">main</span><span class="token punctuation">.</span><span class="token property-access">temp</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain-text">°C</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Text</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">View</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+
+                        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Text</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span><span class="token property-access">description</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                            </span><span class="token punctuation">{</span>clima<span class="token punctuation">.</span><span class="token property-access">weather</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token property-access">description</span><span class="token punctuation">.</span><span class="token method function property-access">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain-text">
+                        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Text</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+
+                        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">View</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span><span class="token property-access">detailsContainer</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">View</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span><span class="token property-access">detailItem</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Ionicons</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>water-outline<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">20</span><span class="token punctuation">}</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#fff<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+                                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Text</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span><span class="token property-access">detailText</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Umidade: </span><span class="token punctuation">{</span>clima<span class="token punctuation">.</span><span class="token property-access">main</span><span class="token punctuation">.</span><span class="token property-access">humidity</span><span class="token punctuation">}</span><span class="token plain-text">%</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Text</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">View</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">View</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span><span class="token property-access">detailItem</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Ionicons</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>speedometer-outline<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">20</span><span class="token punctuation">}</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#fff<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+                                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Text</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span><span class="token property-access">detailText</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Vento: </span><span class="token punctuation">{</span>clima<span class="token punctuation">.</span><span class="token property-access">wind</span><span class="token punctuation">.</span><span class="token property-access">speed</span><span class="token punctuation">}</span><span class="token plain-text"> m/s</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Text</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">View</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">View</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">View</span></span><span class="token punctuation">&gt;</span></span>
+                <span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">View</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">LinearGradient</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Helper para escolher o ícone com base no clima principal</span>
+<span class="token keyword keyword-function">function</span> <span class="token function">getIconName</span><span class="token punctuation">(</span>weatherMain<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-switch">switch</span> <span class="token punctuation">(</span>weatherMain<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-case">case</span> <span class="token string">'Clear'</span><span class="token operator">:</span> <span class="token keyword keyword-return">return</span> <span class="token string">'sunny-outline'</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-case">case</span> <span class="token string">'Clouds'</span><span class="token operator">:</span> <span class="token keyword keyword-return">return</span> <span class="token string">'cloudy-outline'</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-case">case</span> <span class="token string">'Rain'</span><span class="token operator">:</span> <span class="token keyword keyword-return">return</span> <span class="token string">'rainy-outline'</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-case">case</span> <span class="token string">'Thunderstorm'</span><span class="token operator">:</span> <span class="token keyword keyword-return">return</span> <span class="token string">'thunderstorm-outline'</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-case">case</span> <span class="token string">'Snow'</span><span class="token operator">:</span> <span class="token keyword keyword-return">return</span> <span class="token string">'snow-outline'</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-case">case</span> <span class="token string">'Drizzle'</span><span class="token operator">:</span> <span class="token keyword keyword-return">return</span> <span class="token string">'rainy-outline'</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-default">default</span><span class="token operator">:</span> <span class="token keyword keyword-return">return</span> <span class="token string">'partly-sunny-outline'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-const">const</span> styles <span class="token operator">=</span> <span class="token maybe-class-name">StyleSheet</span><span class="token punctuation">.</span><span class="token method function property-access">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    container<span class="token operator">:</span> <span class="token punctuation">{</span>
+        flex<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    content<span class="token operator">:</span> <span class="token punctuation">{</span>
+        flex<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        padding<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+        marginTop<span class="token operator">:</span> <span class="token number">50</span><span class="token punctuation">,</span>
+        alignItems<span class="token operator">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    title<span class="token operator">:</span> <span class="token punctuation">{</span>
+        fontSize<span class="token operator">:</span> <span class="token number">32</span><span class="token punctuation">,</span>
+        fontWeight<span class="token operator">:</span> <span class="token string">'bold'</span><span class="token punctuation">,</span>
+        color<span class="token operator">:</span> <span class="token string">'#fff'</span><span class="token punctuation">,</span>
+        marginBottom<span class="token operator">:</span> <span class="token number">30</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    searchContainer<span class="token operator">:</span> <span class="token punctuation">{</span>
+        flexDirection<span class="token operator">:</span> <span class="token string">'row'</span><span class="token punctuation">,</span>
+        backgroundColor<span class="token operator">:</span> <span class="token string">'rgba(255,255,255,0.2)'</span><span class="token punctuation">,</span> <span class="token comment">// Efeito vidro semi-transparente</span>
+        borderRadius<span class="token operator">:</span> <span class="token number">25</span><span class="token punctuation">,</span>
+        paddingHorizontal<span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
+        paddingVertical<span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+        width<span class="token operator">:</span> <span class="token string">'100%'</span><span class="token punctuation">,</span>
+        alignItems<span class="token operator">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span>
+        marginBottom<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    input<span class="token operator">:</span> <span class="token punctuation">{</span>
+        flex<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        color<span class="token operator">:</span> <span class="token string">'#fff'</span><span class="token punctuation">,</span>
+        fontSize<span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+        paddingVertical<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    button<span class="token operator">:</span> <span class="token punctuation">{</span>
+        padding<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    weatherCard<span class="token operator">:</span> <span class="token punctuation">{</span>
+        backgroundColor<span class="token operator">:</span> <span class="token string">'rgba(255, 255, 255, 0.15)'</span><span class="token punctuation">,</span> <span class="token comment">// Glassmorphism</span>
+        borderRadius<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+        padding<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+        width<span class="token operator">:</span> <span class="token string">'100%'</span><span class="token punctuation">,</span>
+        alignItems<span class="token operator">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span>
+        marginTop<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    cityName<span class="token operator">:</span> <span class="token punctuation">{</span>
+        fontSize<span class="token operator">:</span> <span class="token number">28</span><span class="token punctuation">,</span>
+        fontWeight<span class="token operator">:</span> <span class="token string">'600'</span><span class="token punctuation">,</span>
+        color<span class="token operator">:</span> <span class="token string">'#fff'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    tempContainer<span class="token operator">:</span> <span class="token punctuation">{</span>
+        flexDirection<span class="token operator">:</span> <span class="token string">'row'</span><span class="token punctuation">,</span>
+        alignItems<span class="token operator">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span>
+        marginVertical<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    temp<span class="token operator">:</span> <span class="token punctuation">{</span>
+        fontSize<span class="token operator">:</span> <span class="token number">64</span><span class="token punctuation">,</span>
+        fontWeight<span class="token operator">:</span> <span class="token string">'bold'</span><span class="token punctuation">,</span>
+        color<span class="token operator">:</span> <span class="token string">'#fff'</span><span class="token punctuation">,</span>
+        marginLeft<span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    description<span class="token operator">:</span> <span class="token punctuation">{</span>
+        fontSize<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+        color<span class="token operator">:</span> <span class="token string">'#eee'</span><span class="token punctuation">,</span>
+        marginBottom<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+        fontStyle<span class="token operator">:</span> <span class="token string">'italic'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    detailsContainer<span class="token operator">:</span> <span class="token punctuation">{</span>
+        flexDirection<span class="token operator">:</span> <span class="token string">'row'</span><span class="token punctuation">,</span>
+        justifyContent<span class="token operator">:</span> <span class="token string">'space-between'</span><span class="token punctuation">,</span>
+        width<span class="token operator">:</span> <span class="token string">'100%'</span><span class="token punctuation">,</span>
+        marginTop<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    detailItem<span class="token operator">:</span> <span class="token punctuation">{</span>
+        flexDirection<span class="token operator">:</span> <span class="token string">'row'</span><span class="token punctuation">,</span>
+        alignItems<span class="token operator">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    detailText<span class="token operator">:</span> <span class="token punctuation">{</span>
+        color<span class="token operator">:</span> <span class="token string">'#fff'</span><span class="token punctuation">,</span>
+        marginLeft<span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+        fontSize<span class="token operator">:</span> <span class="token number">16</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><hr>
+<h2 id="6-modificação-do-ícone-e-nome-do-app">6. Modificação do Ícone e Nome do App </h2>
+<p>Para personalizar a identidade do seu aplicativo:</p>
+<ol>
+<li><strong>Nome do App</strong>: Abra o arquivo <code>app.json</code> e altere a propriedade <code>name</code>.<pre data-role="codeBlock" data-info="json" class="language-json json"><code><span class="token punctuation">{</span>
+  <span class="token property">"expo"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Meu Clima App"</span><span class="token punctuation">,</span>
+    <span class="token property">"slug"</span><span class="token operator">:</span> <span class="token string">"app-previsao-tempo"</span><span class="token punctuation">,</span>
+    ...
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></li>
+<li><strong>Ícone</strong>:
+<ul>
+<li>Crie uma imagem de <strong>1024x1024px</strong> (para garantir qualidade).</li>
+<li>Salve como <code>icon.png</code> e substitua o arquivo em <code>assets/icon.png</code>.</li>
+<li>O Expo gerará automaticamente os ícones para Android e iOS.</li>
+<li>Substitua também <code>adaptive-icon.png</code> e <code>splash.png</code> se desejar.</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><strong>OBSERVAÇÃO:</strong><br>
+Um dos sites mais usados para gerar ícones para aplicativos é o <a href="https://appicon.co/">App Icon Generator</a>. A imagem do aplicativo a ser usada nesse site pode ser gerada com ferramentas de inteligência artificial, como o ChatGPT, Copilot ou Gemini (através do Nano Banana).</p>
+</blockquote>
+<hr>
+<h2 id="7-deployment-com-eas-gerando-o-apk">7. Deployment com EAS (Gerando o APK) </h2>
+<p>Agora vamos transformar o código em um arquivo APK instalável no Android.</p>
+<h3 id="71-instalar-eas-cli-e-login">7.1. Instalar EAS CLI e Login </h3>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Instala o EAS CLI globalmente (se ainda não tiver)</span>
+<span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> eas-cli
+
+<span class="token comment"># Faça login na sua conta Expo</span>
+eas login
+</code></pre><h3 id="72-configurar-o-projeto">7.2. Configurar o Projeto </h3>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Cria o ID do projeto e o arquivo eas.json</span>
+eas build:configure
+</code></pre><ul>
+<li>Responda <code>Android</code> quando perguntado sobre a plataforma (ou All).</li>
+</ul>
+<h3 id="73-configurar-para-gerar-apk-easjson">7.3. Configurar para Gerar APK (eas.json) </h3>
+<p>Por padrão, o EAS gera um <code>.aab</code> (App Bundle) para a Play Store. Para testes ou APKPure, queremos um <code>.apk</code>.<br>
+Abra o arquivo <code>eas.json</code> e modifique o perfil <code>preview</code> (ou crie um novo):</p>
+<pre data-role="codeBlock" data-info="json" class="language-json json"><code><span class="token punctuation">{</span>
+  <span class="token property">"build"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"preview"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"android"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"buildType"</span><span class="token operator">:</span> <span class="token string">"apk"</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">"preview2"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"android"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"gradleCommand"</span><span class="token operator">:</span> <span class="token string">":app:assembleRelease"</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">"preview3"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"developmentClient"</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">"preview4"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"distribution"</span><span class="token operator">:</span> <span class="token string">"internal"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">"production"</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre><h3 id="74-executar-o-build">7.4. Executar o Build </h3>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Gera o APK</span>
+eas build <span class="token parameter variable">-p</span> android <span class="token parameter variable">--profile</span> preview
+</code></pre><ul>
+<li>O processo acontecerá na nuvem.</li>
+<li>Ao finalizar, o terminal mostrará um link para baixar o arquivo <code>.apk</code>.</li>
+<li>Baixe-o e transfira para seu celular para testar.</li>
+</ul>
+<hr>
+<h2 id="8-publicação-na-apkpure">8. Publicação na APKPure </h2>
+<p>A APKPure é uma loja alternativa popular que permite publicar arquivos APK/XAPK diretamente.</p>
+<h3 id="passo-1-conta-de-desenvolvedor">Passo 1: Conta de Desenvolvedor </h3>
+<ol>
+<li>Acesse o <a href="https://developer.apkpure.com/">Console de Desenvolvedor da APKPure</a>.</li>
+<li>Crie uma conta ou faça login.</li>
+<li>Preencha seu perfil de desenvolvedor (Nome, Site, etc.).</li>
+</ol>
+<h3 id="passo-2-preparar-os-materiais">Passo 2: Preparar os Materiais </h3>
+<p>Tenha em mãos:</p>
+<ul>
+<li>O arquivo <strong>.apk</strong> gerado no passo anterior.</li>
+<li><strong>Ícone</strong> (512x512 PNG/JPG).</li>
+<li><strong>Screenshots</strong> (Capturas de tela do app funcionando).</li>
+<li><strong>Descrição</strong> curta e completa do aplicativo.</li>
+</ul>
+<h3 id="passo-3-criar-e-enviar">Passo 3: Criar e Enviar </h3>
+<ol>
+<li>No dashboard, clique em <strong>"Add New App"</strong>.</li>
+<li>Preencha o <strong>Nome do App</strong> e a <strong>Categoria</strong> (Weather).</li>
+<li>Envie (Upload) o seu arquivo <code>.apk</code>. O sistema detectará o pacote automaticamente (ex: <code>com.seuusuario.appprevisaotempo</code>).</li>
+<li>Preencha os detalhes da loja:
+<ul>
+<li>Upload do Ícone e Screenshots.</li>
+<li>Insira a descrição.</li>
+<li>Defina a classificação etária (Livre).</li>
+<li><strong>Importante (2025):</strong> Insira uma URL de <strong>Política de Privacidade</strong> (mesmo que seja simples, hospedada no Google Sites ou GitHub Pages).</li>
+</ul>
+</li>
+<li>Clique em <strong>"Submit"</strong> ou <strong>"Publish"</strong>.</li>
+</ol>
+<h3 id="passo-4-aprovação">Passo 4: Aprovação </h3>
+<p>A equipe da APKPure revisará o app (geralmente leva de 24 a 72 horas). Após aprovado, seu app estará disponível para download mundialmente.</p>
+<hr>
+<p><strong>Parabéns!</strong> Você criou, configurou e publicou um aplicativo de previsão do tempo.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
