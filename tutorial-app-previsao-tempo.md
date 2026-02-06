@@ -658,6 +658,11 @@ const styles = StyleSheet.create({
 });
 ```
 
+> **IMPORTANTE: API Key no APK Final**
+> Ao gerar o APK com o EAS, o arquivo `.env` local não é incluído por segurança. Para que sua API Key funcione no app instalado:
+> 1.  **Opção Rápida:** Coloque a chave diretamente no código em `app/weather.tsx` (substituindo o `process.env...` pela string da chave).
+> 2.  **Opção Profissional:** Use os "Secrets" do EAS. Rode no terminal: `eas secret:create --scope project --name EXPO_PUBLIC_WEATHER_API_KEY --value SUA_CHAVE`.
+
 ---
 
 ## 6. Modificação do Ícone e Nome do App
